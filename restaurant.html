@@ -2,28 +2,98 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="restaurant.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-
-    <title>Vivu Deluxe</title>
+    <title>Vivu Deluxe - Fine Dining Restaurant</title>
 </head>
 
 <body>
-
-    <div class="top">
-        <div lang="logo">Vivu</div>
-        <div class="nav">
-            <a href="#">Book Now</a>
-            <a href="#">About</a>
-            <a href="#">Menu</a>
-            <a href="#">Location</a>
-            <a href="#">Contact Us</a>
+    <header class="header">
+        <div class="logo">
+            <h1>Vivu Deluxe</h1>
         </div>
-        <div class="search">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
             <i class="bx bx-menu"></i>
         </div>
-    </div>
+    </header>
 
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Are You Hungry?</h2>
+            <h1>Don't Wait!</h1>
+            <p>Start your dining experience with us now. Check out our exclusive menu and book a table today!</p>
+            <a href="#menu" class="btn">Check Out Menu</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Vivu Deluxe</h2>
+            <p>At Vivu Deluxe, we offer an unforgettable dining experience with a blend of gourmet dishes, refined
+                ambiance, and top-tier customer service. Our chefs create culinary masterpieces using the finest
+                ingredients to delight your palate.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Grilled Steak</h3>
+                <p>Juicy steak served with roasted vegetables and creamy mashed potatoes.</p>
+                <span class="price">$25</span>
+            </div>
+            <div class="menu-item">
+                <h3>Lobster Bisque</h3>
+                <p>A rich, creamy soup with fresh lobster and a touch of brandy.</p>
+                <span class="price">$18</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location">
+        <h2>Our Location</h2>
+        <p>123 Gourmet Avenue, Food City, CA</p>
+        <div class="map">
+            <iframe src="https://maps.google.com/?q=123+Gourmet+Avenue+CA&output=embed" width="600" height="450"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Vivu Deluxe. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="restaurant.js"></script>
 </body>
 
 </html>
