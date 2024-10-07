@@ -137,7 +137,7 @@
                                 if (!seat.available) {
                                     seatElement.classList.remove('available');
                                     seatElement.classList.add('unavailable');
-                                    seatElement.style.pointerEvents = 'none'; // Disable clicking
+                                    seatElement.style.pointerEvents = 'none';
                                 }
                             }
                         });
@@ -169,13 +169,13 @@
                     .then(response => response.json())
                     .then(data => {
                         alert(data.message);
-                        fetchSeats(); // Refresh seat status
+                        fetchSeats();
                     });
             });
 
             document.querySelectorAll('.seat.available').forEach(seat => {
                 seat.addEventListener('click', function () {
-                    this.classList.toggle('selected'); // Toggle selected state
+                    this.classList.toggle('selected');
                     if (this.classList.contains('selected')) {
                         this.classList.remove('available');
                         this.classList.add('unavailable');

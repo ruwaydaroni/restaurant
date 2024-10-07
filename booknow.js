@@ -1,6 +1,5 @@
 document.getElementById('booking-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form from submitting normally
-
+    event.preventDefault();
     const selectedSeats = Array.from(document.querySelectorAll('.seat.selected')).map(seat => seat.getAttribute('data-seat'));
 
     const bookingData = {
@@ -10,10 +9,10 @@ document.getElementById('booking-form').addEventListener('submit', function (eve
         date: document.getElementById('date').value,
         time: document.getElementById('time').value,
         guests: document.getElementById('guests').value,
-        seats: selectedSeats // Ensure this is being sent correctly
+        seats: selectedSeats
     };
 
-    console.log("Sending booking data:", bookingData); // Log booking data
+    console.log("Sending booking data:", bookingData);
 
     fetch('http://localhost/restaurant/book_seat.php', {
         method: 'POST',
@@ -25,17 +24,14 @@ document.getElementById('booking-form').addEventListener('submit', function (eve
         .then(response => response.json())
         .then(data => {
             alert(data.message);
-            fetchSeats(); // Refresh seat status
-
-            // Clear the form fields after successful booking
-            document.getElementById('booking-form').reset(); // Resets the form
-            // Optionally, clear selected seats visually if needed
+            fetchSeats();
+            document.getElementById('booking-form').reset();
             document.querySelectorAll('.seat.selected').forEach(seat => {
-                seat.classList.remove('selected'); // Remove the selected class from all seats
+                seat.classList.remove('selected');
             });
         })
         .catch(error => {
-            console.error('Error:', error); // Log any errors
+            console.error('Error:', error);
             alert('There was an error booking your seats.');
         });
 });
